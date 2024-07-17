@@ -1,4 +1,5 @@
 import Logo from "../../../assets/LogoPreta.svg";
+import { SearchForm } from "../../forms/SearchForm";
 
 export function Header() {
    return (
@@ -11,7 +12,7 @@ export function Header() {
                </li>
             </ul>
          </nav>
-         {/* formulário de busca */}
+         <SearchForm />
          <button>Abrir carrinho</button>
       </header>
    );
