@@ -1,5 +1,5 @@
 import { productList } from "../../../data/product.data";
-import { ProductCard } from "../../fragments/ProductCard";
+import { ProductCard } from "../../fragments/cards/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import 'swiper/css/pagination';
