@@ -6,8 +6,10 @@ interface Store {
    isCartVisible: boolean;
    setIsCartVisible: (value: boolean) => void;
    cartProductList: ICartProduct[];
+   removingProduct: ICartProduct | null;
+   setRemovingProduct: (value: ICartProduct | null) => void;
    addProduct: (product: IProduct) => void;
-   removeProduct: (removingId: number) => void;
+   decrementProduct: (removingId: number) => void;
 }
 
 export const useCart = create<Store>((set) => ({
@@ -15,6 +17,10 @@ export const useCart = create<Store>((set) => ({
    isCartVisible: false,
    setIsCartVisible(value) {
       set({ isCartVisible: value });
+   },
+   removingProduct: null,
+   setRemovingProduct(value) {
+       set({ removingProduct: value });
    },
    cartProductList: [],
    addProduct(product) {
@@ -42,5 +48,23 @@ export const useCart = create<Store>((set) => ({
          }
       });
    },
-   removeProduct(removingId) {},
+   decrementProduct(removingId) {
+    set(({ cartProductList }) => {
+        const product = cartProductList.find(cartProduct => cartProduct.id === removingId) as ICartProduct;
+
+        if(product.quantity > 1){
+            const newCartProductList = cartProductList.map(cartProduct => {
+                if(cartProduct.id === product.id){
+                    return { ...cartProduct, quantity: cartProduct.quantity - 1};
+                } else {
+                   return cartProduct; 
+                }
+            });
+
+            return { cartProductList: newCartProductList };
+        } else {
+           return { removingProduct: product }; 
+        }
+    });    
+   },
 }));
