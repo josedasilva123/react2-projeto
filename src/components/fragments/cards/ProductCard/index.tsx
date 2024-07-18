@@ -1,4 +1,5 @@
 import { IProduct } from "../../../../interfaces/product.interface";
+import { useCart } from "../../../../stores/useCart/store";
 import { useProduct } from "../../../../stores/useProduct/store";
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 
 export function ProductCard({ product }: Props) {
    const setViewingProduct = useProduct((store) => store.setViewingProduct);
+   const addProduct = useCart((store) => store.addProduct);
 
    return (
       <li>
@@ -16,7 +18,7 @@ export function ProductCard({ product }: Props) {
             <p>{product.price}</p>
          </div>
          <div>
-            <button>Adicionar</button>
+            <button onClick={() => addProduct(product)}>Adicionar</button>
             <button onClick={() => setViewingProduct(product)}>Visualizar</button>
          </div>
       </li>
