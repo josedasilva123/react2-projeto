@@ -1,8 +1,12 @@
+import { useCart } from "../../../../stores/useCart/store";
 import { Modal } from "../Modal";
 
 export function CartModal(){
-    return(
-        <Modal onClose={() => console.log("Fechar")}>
+    const isCartVisible = useCart(store => store.isCartVisible);
+    const setIsCartVisible = useCart(store => store.setIsCartVisible);
+
+    return isCartVisible ? (
+        <Modal onClose={() => setIsCartVisible(false)}>
             <h2>Carrinho</h2>
             <ul>
                 {/* componentes CartProductCard */}
@@ -13,5 +17,5 @@ export function CartModal(){
                 <button>Finalizar a compra</button>
             </div>
         </Modal>
-    )
+    ) : null;
 }

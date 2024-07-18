@@ -1,7 +1,10 @@
 import Logo from "../../../assets/LogoPreta.svg";
+import { useCart } from "../../../stores/useCart/store";
 import { SearchForm } from "../../forms/SearchForm";
 
 export function Header() {
+   const setIsCartVisible = useCart(store => store.setIsCartVisible);
+
    return (
       <header>
          <img src={Logo} alt="Logo preta The Clothstore" />
@@ -13,7 +16,7 @@ export function Header() {
             </ul>
          </nav>
          <SearchForm />
-         <button>Abrir carrinho</button>
+         <button onClick={() => setIsCartVisible(true)}>Abrir carrinho</button>
       </header>
    );
 }
