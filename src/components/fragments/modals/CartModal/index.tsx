@@ -1,4 +1,5 @@
 import { useCart } from "../../../../stores/useCart/store";
+import { toMoney } from "../../../../utils/toMoney";
 import { CartProductCard } from "../../cards/CartProductCard";
 import { Modal } from "../Modal";
 
@@ -6,6 +7,10 @@ export function CartModal() {
    const isCartVisible = useCart((store) => store.isCartVisible);
    const setIsCartVisible = useCart((store) => store.setIsCartVisible);
    const cartProductList = useCart((store) => store.cartProductList);
+
+   const total = cartProductList.reduce((accValue, cartProduct) => {
+      return accValue + cartProduct.price * cartProduct.quantity
+   }, 0);
 
    return isCartVisible ? (
       <Modal onClose={() => setIsCartVisible(false)}>
@@ -23,7 +28,7 @@ export function CartModal() {
 
          <div>
             <p>Total:</p>
-            <p>R$ 200,00</p>
+            <p>{toMoney(total)}</p>
             <button>Finalizar a compra</button>
          </div>
       </Modal>
