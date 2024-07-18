@@ -1,21 +1,20 @@
-import { IProduct } from "../../../../interfaces/product.interface";
+import { useProduct } from "../../../../stores/useProduct/store";
 import { Modal } from "../Modal";
 
-interface Props {
-   product: IProduct;
-}
+export function ProductModal() {
+   const viewingProduct = useProduct(store => store.viewingProduct);
+   const setViewingProduct = useProduct(store => store.setViewingProduct);
 
-export function ProductModal({ product }: Props) {
-   return (
-      <Modal onClose={() => console.log("Fechar")}>
+   return viewingProduct ? (
+      <Modal onClose={() => setViewingProduct(null)}>
          <div>
-            <img src={product.img} alt={`Ilustração do produto ${product.name}`} />
+            <img src={viewingProduct.img} alt={`Ilustração do produto ${viewingProduct.name}`} />
             <div>
-               <h3>{product.name}</h3>
-               <p>{product.price}</p>
+               <h3>{viewingProduct.name}</h3>
+               <p>{viewingProduct.price}</p>
                <button>Adicionar</button>
             </div>
          </div>
       </Modal>
-   );
+   ) : null;
 }

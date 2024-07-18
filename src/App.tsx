@@ -1,4 +1,5 @@
 import { CartModal } from "./components/fragments/modals/CartModal";
+import { ProductModal } from "./components/fragments/modals/ProductModal";
 import { Template } from "./components/template/Template";
 import { HomePage } from "./pages/HomePage";
 import "./style.css";
@@ -9,6 +10,7 @@ function App() {
       <Template>
          <HomePage />
          <CartModal />
+         <ProductModal />
       </Template>
    );
 }
