@@ -3,15 +3,20 @@ import { ProductModal } from "./components/fragments/modals/ProductModal";
 import { Template } from "./components/template/Template";
 import { HomePage } from "./pages/HomePage";
 import "./style.css";
-import 'swiper/css';
+import "swiper/css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
    return (
-      <Template>
-         <HomePage />
-         <CartModal />
-         <ProductModal />
-      </Template>
+      <>
+         <Template>
+            <HomePage />
+            <CartModal />
+            <ProductModal />
+         </Template>
+         <ToastContainer position="bottom-right" autoClose={2500} />
+      </>
    );
 }
 
