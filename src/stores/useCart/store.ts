@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { ICartProduct, IProduct } from "../../interfaces/product.interface";
+import { toast } from "react-toastify";
 
 interface Store {
    count: number;
@@ -32,7 +33,7 @@ export const useCart = create<Store>((set) => ({
       set(({ cartProductList }) => {
          const existingProduct = cartProductList.find(
             (cartProduct) => cartProduct.id === product.id
-         );
+         );        
 
          if (existingProduct) {
             const newCartProductList = cartProductList.map((cartProduct) => {
@@ -49,6 +50,8 @@ export const useCart = create<Store>((set) => ({
                ...product,
                quantity: 1,
             };
+
+            toast.success("Produto adicionado com sucesso");
 
             return { cartProductList: [...cartProductList, newCartProduct] };
          }
@@ -82,6 +85,8 @@ export const useCart = create<Store>((set) => ({
          const newCartProductList = cartProductList.filter(
             (cartProduct) => cartProduct.id !== removingProduct?.id
          );
+
+         toast.success("Produto removido com sucesso.");
 
          return { cartProductList: newCartProductList, removingProduct: null };
       });
