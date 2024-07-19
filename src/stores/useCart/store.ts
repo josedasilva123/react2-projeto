@@ -1,18 +1,7 @@
 import { create } from "zustand";
-import { ICartProduct, IProduct } from "../../interfaces/product.interface";
+import { ICartProduct } from "../../interfaces/product.interface";
+import { Store } from "./_interface";
 import { toast } from "react-toastify";
-
-interface Store {
-   count: number;
-   isCartVisible: boolean;
-   setIsCartVisible: (value: boolean) => void;
-   cartProductList: ICartProduct[];
-   removingProduct: ICartProduct | null;
-   setRemovingProduct: (value: ICartProduct | null) => void;
-   addProduct: (product: IProduct) => void;
-   decrementProduct: (removingId: number) => void;
-   removeProduct: () => void;
-}
 
 export const useCart = create<Store>((set) => ({
    count: 1,
@@ -33,7 +22,7 @@ export const useCart = create<Store>((set) => ({
       set(({ cartProductList }) => {
          const existingProduct = cartProductList.find(
             (cartProduct) => cartProduct.id === product.id
-         );        
+         );
 
          if (existingProduct) {
             const newCartProductList = cartProductList.map((cartProduct) => {
@@ -79,7 +68,7 @@ export const useCart = create<Store>((set) => ({
          }
       });
    },
-   
+
    removeProduct() {
       set(({ cartProductList, removingProduct }) => {
          const newCartProductList = cartProductList.filter(
