@@ -16,7 +16,7 @@ export function Header() {
             </ul>
          </nav>
          <SearchForm />
-         <button onClick={() => setIsCartVisible(true)} aria-label="cart">
+         <button className="round-button" onClick={() => setIsCartVisible(true)} aria-label="cart">
             <span className="material-symbols-outlined">shopping_bag</span>
          </button>
       </header>

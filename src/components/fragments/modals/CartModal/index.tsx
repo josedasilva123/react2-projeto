@@ -29,7 +29,7 @@ export function CartModal() {
          <div>
             <p className="text small">Total:</p>
             <p className="text small bold">{toMoney(total)}</p>
-            <button>Finalizar a compra</button>
+            <button className="button one full">Finalizar a compra</button>
          </div>
       </Modal>
    ) : null;

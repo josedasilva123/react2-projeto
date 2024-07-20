@@ -1,0 +1,55 @@
+%buttonDefaults {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 400;
+
+    color: var(--color-white);
+    background: var(--color-black);
+
+    transition: 0.4s;
+
+    &.full{
+        width: 100%;
+    }
+
+    &:hover {
+        background: var(--color-black2);
+    }
+}
+
+.button {
+    @extend %buttonDefaults;
+
+    gap: 10px;
+
+    height: 3.25rem;
+
+    &.one {
+        font-size: 1.25rem;
+        padding: 0 60px;
+    }
+
+    &.two {
+        font-size: 1rem;
+        padding: 0 22px;
+    }
+}
+
+.round-button {
+    @extend %buttonDefaults;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 1.25rem;
+}
+
+.link{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-black);
+}

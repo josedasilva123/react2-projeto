@@ -19,7 +19,7 @@ export function ProductCard({ product }: Props) {
             <p className="text small">{toMoney(product.price)}</p>
          </div>
          <div>
-            <button onClick={() => addProduct(product)}>Adicionar</button>
+            <button className="button two" onClick={() => addProduct(product)}>Adicionar</button>
             <button onClick={() => setViewingProduct(product)}>
                <span className="material-symbols-outlined">visibility</span>
             </button>

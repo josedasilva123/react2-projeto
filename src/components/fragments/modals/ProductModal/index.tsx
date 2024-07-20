@@ -20,7 +20,7 @@ export function ProductModal() {
             <div>
                <h3 className="title three">{viewingProduct.name}</h3>
                <p className="text small">{toMoney(viewingProduct.price)}</p>
-               <button onClick={handleClick}>Adicionar</button>
+               <button className="button two" onClick={handleClick}>Adicionar</button>
             </div>
          </div>
       </Modal>
