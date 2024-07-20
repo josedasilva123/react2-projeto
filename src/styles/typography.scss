@@ -1,0 +1,45 @@
+.title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-black);
+
+    &.one {
+        font-size: clamp(2.625rem, 7vw, 5.5rem);
+    }
+
+    &.two {
+        font-size: clamp(1.625rem, 4vw, 2rem);
+    }
+
+    &.three {
+        font-size: 1.25rem;
+    }
+
+    &.center{
+        text-align: center;
+    }
+}
+
+.text{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--color-black);
+
+    &.small{
+        font-size: 0.875rem;
+    }
+
+    &.center{
+        text-align: center;
+    }
+}
+
+.menu-item{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 0.9375rem;
+    color: var(--color-black);
+}
