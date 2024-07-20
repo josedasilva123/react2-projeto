@@ -1,3 +1,9 @@
+%fontDefaults{
+    &.center{
+        text-align: center;
+    }
+}
+
 .title {
     font-family: var(--font-primary);
     font-weight: 500;
@@ -16,9 +22,7 @@
         font-size: 1.25rem;
     }
 
-    &.center{
-        text-align: center;
-    }
+    @extend %fontDefaults;
 }
 
 .text{
@@ -32,9 +36,7 @@
         font-size: 0.875rem;
     }
 
-    &.center{
-        text-align: center;
-    }
+    @extend %fontDefaults;
 }
 
 .menu-item{
