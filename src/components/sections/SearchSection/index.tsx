@@ -14,7 +14,7 @@ export function SearchSection() {
 
    return (
       <section>
-         <h2>Resultados de busca para: {search}</h2>
+         <h2 className="title two">Resultados de busca para: {search}</h2>
          <button onClick={() => setSearch(null)}>Limpar busca</button>
          {searchResults.length > 0 ? (
             <ul>
@@ -23,7 +23,7 @@ export function SearchSection() {
                ))}
             </ul>
          ) : (
-            <p>Nenhum resultado encontrado.</p>
+            <p className="text">Nenhum resultado encontrado.</p>
          )}
       </section>
    );

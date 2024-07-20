@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 export function ProductsSection() {
    return (
       <section>
-         <h2>Produtos</h2>
+         <h2 className="title one">Produtos</h2>
          <Swiper
             grabCursor
             modules={[Pagination]}

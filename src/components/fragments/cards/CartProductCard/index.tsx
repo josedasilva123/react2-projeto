@@ -15,8 +15,8 @@ export function CartProductCard({ product }: Props) {
       <li>
          <img src={product.img} alt={`Ilustração do produto ${product.name}`} />
          <div>
-            <h3>{product.name}</h3>
-            <p>{toMoney(product.price)}</p>
+            <h3 className="title three">{product.name}</h3>
+            <p className="text small">{toMoney(product.price)}</p>
          </div>
          <div>
             <button onClick={() => decrementProduct(product.id)} aria-label="remover">

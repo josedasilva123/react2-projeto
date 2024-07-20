@@ -11,7 +11,7 @@ export function Header() {
          <nav>
             <ul>
                <li>
-                  <a href="">produtos</a>
+                  <a className="menu-item" href="">produtos</a>
                </li>
             </ul>
          </nav>

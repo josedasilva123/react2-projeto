@@ -18,8 +18,8 @@ export function ProductModal() {
          <div>
             <img src={viewingProduct.img} alt={`Ilustração do produto ${viewingProduct.name}`} />
             <div>
-               <h3>{viewingProduct.name}</h3>
-               <p>{toMoney(viewingProduct.price)}</p>
+               <h3 className="title three">{viewingProduct.name}</h3>
+               <p className="text small">{toMoney(viewingProduct.price)}</p>
                <button onClick={handleClick}>Adicionar</button>
             </div>
          </div>

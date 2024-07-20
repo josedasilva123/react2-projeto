@@ -9,8 +9,8 @@ export function BannerSection() {
          <img src={Foto2} alt="Foto sobre moda 2" />
          <img src={Foto3} alt="Foto sobre moda 3" />
          <div>
-            <h1>Clothstore</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1 className="title one">Clothstore</h1>
+            <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <a href="#">
                 Ver mais
             </a>

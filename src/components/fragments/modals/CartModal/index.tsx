@@ -14,7 +14,7 @@ export function CartModal() {
 
    return isCartVisible ? (
       <Modal onClose={() => setIsCartVisible(false)}>
-         <h2>Carrinho</h2>
+         <h2 className="title two">Carrinho</h2>
 
          {cartProductList.length > 0 ? (
             <ul>
@@ -23,12 +23,12 @@ export function CartModal() {
                ))}
             </ul>
          ) : (
-            <p>Nenhum produto adicionado.</p>
+            <p className="text small">Nenhum produto adicionado.</p>
          )}
 
          <div>
-            <p>Total:</p>
-            <p>{toMoney(total)}</p>
+            <p className="text small">Total:</p>
+            <p className="text small bold">{toMoney(total)}</p>
             <button>Finalizar a compra</button>
          </div>
       </Modal>

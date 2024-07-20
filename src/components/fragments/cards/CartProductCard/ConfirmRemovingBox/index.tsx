@@ -11,7 +11,7 @@ export function ConfirmRemovingBox({ productId }: Props) {
 
    return removingProduct?.id === productId ? (
       <div role="dialog">
-         <p>Tem certeza que deseja remover este item do carrinho?</p>
+         <p className="text small">Tem certeza que deseja remover este item do carrinho?</p>
          <div>
             <button onClick={removeProduct}>Sim</button>
             <button onClick={() => setRemovingProduct(null)}>Não</button>
