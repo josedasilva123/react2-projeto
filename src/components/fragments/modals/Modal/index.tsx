@@ -10,7 +10,9 @@ export function Modal({ children, onClose, className }: Props) {
    return createPortal(
       <div className={className}>
          <div role="dialog">
-            <button onClick={onClose}>Fechar</button>
+            <button onClick={onClose} aria-label="close">
+               <span className="material-symbols-outlined">close</span>
+            </button>
             {children}
          </div>
       </div>,

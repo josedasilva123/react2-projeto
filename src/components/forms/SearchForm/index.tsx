@@ -6,20 +6,23 @@ export function SearchForm() {
 
    const setSearch = useProduct((store) => store.setSearch);
 
-   function submit(e: FormEvent<HTMLFormElement>){
-    e.preventDefault();
-    setSearch(value);
-    setValue("");
+   function submit(e: FormEvent<HTMLFormElement>) {
+      e.preventDefault();
+      setSearch(value);
+      setValue("");
    }
 
    return (
       <form onSubmit={submit}>
-         <button type="submit">Buscar</button>
+         <button type="submit">
+            <span className="material-symbols-outlined">search</span>
+         </button>
          <input
             type="text"
             name="search"
             id="search"
             value={value}
+            placeholder="Buscar ..."
             onChange={(e) => setValue(e.target.value)}
          />
       </form>

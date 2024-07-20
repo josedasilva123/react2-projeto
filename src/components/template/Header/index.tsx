@@ -3,7 +3,7 @@ import { useCart } from "../../../stores/useCart/store";
 import { SearchForm } from "../../forms/SearchForm";
 
 export function Header() {
-   const setIsCartVisible = useCart(store => store.setIsCartVisible);
+   const setIsCartVisible = useCart((store) => store.setIsCartVisible);
 
    return (
       <header>
@@ -16,7 +16,9 @@ export function Header() {
             </ul>
          </nav>
          <SearchForm />
-         <button onClick={() => setIsCartVisible(true)}>Abrir carrinho</button>
+         <button onClick={() => setIsCartVisible(true)} aria-label="cart">
+            <span className="material-symbols-outlined">shopping_bag</span>
+         </button>
       </header>
    );
 }

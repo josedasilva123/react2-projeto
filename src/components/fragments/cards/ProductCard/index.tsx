@@ -20,7 +20,9 @@ export function ProductCard({ product }: Props) {
          </div>
          <div>
             <button onClick={() => addProduct(product)}>Adicionar</button>
-            <button onClick={() => setViewingProduct(product)}>Visualizar</button>
+            <button onClick={() => setViewingProduct(product)}>
+               <span className="material-symbols-outlined">visibility</span>
+            </button>
          </div>
       </li>
    );
