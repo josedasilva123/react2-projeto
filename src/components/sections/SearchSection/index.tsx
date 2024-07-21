@@ -13,7 +13,7 @@ export function SearchSection() {
   );
 
   return (
-    <section>
+    <section className="section-p">
       <div className="container">
         <h2 className="title two">Resultados de busca para: {search}</h2>
         <button onClick={() => setSearch(null)}>Limpar busca</button>

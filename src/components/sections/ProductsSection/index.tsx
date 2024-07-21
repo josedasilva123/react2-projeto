@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 
 export function ProductsSection() {
   return (
-    <section>
+    <section className="section-p">
       <div className="container">
         <h2 className="title one">Produtos</h2>
         <Swiper

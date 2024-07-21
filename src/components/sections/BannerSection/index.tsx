@@ -4,7 +4,7 @@ import Foto3 from "../../../assets/FotoBanner3.jpg";
 
 export function BannerSection() {
   return (
-    <section>
+    <section className="section-p">
       <div className="container">
         <img src={Foto1} alt="Foto sobre moda 1" />
         <img src={Foto2} alt="Foto sobre moda 2" />

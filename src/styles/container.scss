@@ -5,6 +5,10 @@
     padding: 16px;
 }
 
+.section-p{
+    padding: clamp(24px, 5vw, 44px) 0 clamp(34px, 5.5vw, 54px);
+}
+
 .background-black{
     background: var(--color-black);
 }
