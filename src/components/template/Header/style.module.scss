@@ -1,27 +1,38 @@
-.box{
-    padding: 16px 0;
+.box {
+  padding: 16px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px 40px;
+
+  .top {
+    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
+  }
 
-    .top{
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    .bottom {
+      width: 100%;
+
+      form {
         width: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
+        input {
+          width: 100%;
+        }
+      }
     }
-
-    .bottom{
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    @media (max-width: 600px){
-        flex-direction: column;
-    }
+  }
 }

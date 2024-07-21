@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useProduct } from "../../../stores/useProduct/store";
+import styles from "./style.module.scss";
 
 export function SearchForm() {
    const [value, setValue] = useState("");
@@ -13,7 +14,7 @@ export function SearchForm() {
    }
 
    return (
-      <form onSubmit={submit}>
+      <form className={styles.form} onSubmit={submit}>
          <button type="submit">
             <span className="material-symbols-outlined">search</span>
          </button>
