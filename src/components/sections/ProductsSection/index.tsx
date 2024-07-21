@@ -3,10 +3,11 @@ import { ProductCard } from "../../fragments/cards/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
+import styles from "./style.module.scss";
 
 export function ProductsSection() {
   return (
-    <section className="section-p">
+    <section className={`${styles.section} section-p`}>
       <div className="container">
         <h2 className="title one">Produtos</h2>
         <Swiper

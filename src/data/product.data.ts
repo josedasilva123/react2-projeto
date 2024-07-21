@@ -29,4 +29,16 @@ export const productList: IProduct[] = [
       price: 350,
       img: Produto4,
    },
+   {
+      id: 5,
+      name: "Casaco 2",
+      price: 420,
+      img: Produto1,
+   },
+   {
+      id: 6,
+      name: "Camisa 2",
+      price: 175,
+      img: Produto2,
+   },
 ];
