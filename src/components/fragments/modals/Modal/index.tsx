@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import styles from "./style.module.scss";
 
 interface Props {
   children: React.ReactNode;
@@ -8,9 +9,9 @@ interface Props {
 
 export function Modal({ children, onClose, className }: Props) {
   return createPortal(
-    <div className={className}>
-      <div role="dialog" className="background-white">
-        <button onClick={onClose} aria-label="close">
+    <div className={`${className} ${styles.overlay}`}>
+      <div role="dialog" className={`background-white ${styles.box}`}>
+        <button className={styles.close} onClick={onClose} aria-label="close">
           <span className="material-symbols-outlined">close</span>
         </button>
         {children}
