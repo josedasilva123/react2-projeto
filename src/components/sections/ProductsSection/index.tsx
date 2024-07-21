@@ -7,7 +7,7 @@ import styles from "./style.module.scss";
 
 export function ProductsSection() {
   return (
-    <section className={`${styles.section} section-p`}>
+    <section id="produtos" className={`${styles.section} section-p`}>
       <div className="container">
         <h2 className="title one">Produtos</h2>
         <Swiper

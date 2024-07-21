@@ -1,6 +1,7 @@
 import { productList } from "../../../data/product.data";
 import { useProduct } from "../../../stores/useProduct/store";
 import { ProductCard } from "../../fragments/cards/ProductCard";
+import styles from "./style.module.scss";
 
 export function SearchSection() {
   const search = useProduct((store) => store.search);
@@ -13,12 +14,17 @@ export function SearchSection() {
   );
 
   return (
-    <section className="section-p">
+    <section id="produtos" className={`section-p ${styles.section}`}>
       <div className="container">
-        <h2 className="title two">Resultados de busca para: {search}</h2>
-        <button onClick={() => setSearch(null)}>Limpar busca</button>
+        <div className={styles.box}>
+          <h2 className="title two">Resultados de busca para: {search}</h2>
+          <button className="button two" onClick={() => setSearch(null)}>
+            Limpar busca
+          </button>
+        </div>
+
         {searchResults.length > 0 ? (
-          <ul>
+          <ul className={styles.list}>
             {searchResults.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

@@ -5,6 +5,10 @@
 @import "./container.scss";
 @import "./swiper.scss";
 
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     background: var(--color-lightyellow);
 }

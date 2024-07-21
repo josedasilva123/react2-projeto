@@ -16,7 +16,7 @@ export function BannerSection() {
             <p className="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <a className="button one" href="#">
+            <a className="button one" href="#produtos">
               Ver mais
             </a>
           </div>
