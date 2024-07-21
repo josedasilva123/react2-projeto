@@ -9,7 +9,7 @@ interface Props {
 export function Modal({ children, onClose, className }: Props) {
   return createPortal(
     <div className={className}>
-      <div role="dialog">
+      <div role="dialog" className="background-white">
         <button onClick={onClose} aria-label="close">
           <span className="material-symbols-outlined">close</span>
         </button>

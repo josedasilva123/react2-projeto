@@ -4,6 +4,10 @@
 @import "./button.scss";
 @import "./container.scss";
 
+body{
+    background: var(--color-lightyellow);
+}
+
 .material-symbols-outlined{
     font-weight: 200;
 }

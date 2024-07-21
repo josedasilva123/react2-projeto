@@ -2,7 +2,7 @@ import Logo from "../../../assets/LogoBranca.svg";
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="background-black">
       <div className="container">
         <img src={Logo} alt="Logo branca The Clothstore" />
       </div>
