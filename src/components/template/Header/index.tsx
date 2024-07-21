@@ -26,6 +26,7 @@ export function Header() {
         >
           <span className="material-symbols-outlined">shopping_bag</span>
         </button>
+        <hr className="divisor" />
       </div>
     </header>
   );
