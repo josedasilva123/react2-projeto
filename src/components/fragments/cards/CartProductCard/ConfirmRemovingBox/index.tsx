@@ -1,4 +1,5 @@
 import { useCart } from "../../../../../stores/useCart/store";
+import styles from "./style.module.scss";
 
 interface Props {
    productId: number;
@@ -10,7 +11,7 @@ export function ConfirmRemovingBox({ productId }: Props) {
    const removeProduct = useCart((store) => store.removeProduct);
 
    return removingProduct?.id === productId ? (
-      <div role="dialog">
+      <div className={`background-white ${styles.box}`} role="dialog">
          <p className="text small">Tem certeza que deseja remover este item do carrinho?</p>
          <div>
             <button className="button two" onClick={removeProduct}>Sim</button>

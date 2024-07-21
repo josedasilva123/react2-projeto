@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   h2{
     margin-bottom: 25px;
@@ -14,7 +20,7 @@
     justify-content: space-between;
 
     width: 100%;
-    max-width: 390px;
+    max-width: 410px;
     height: 100vh;
     padding: 25px clamp(16px, 3.5vw, 35px);
 
