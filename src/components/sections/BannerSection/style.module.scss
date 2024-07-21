@@ -1,0 +1,28 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 25px;
+
+  .elem1 {
+    grid-area: 1 / 1 / 3 / 3;
+    height: 600px;
+  }
+  .elem2 {
+    grid-area: 1 / 3 / 2 / 4;
+    height: 280px;
+  }
+  .elem3 {
+    grid-area: 1 / 4 / 2 / 5;
+    height: 280px;
+  }
+  .elem4 {
+    grid-area: 2 / 3 / 3 / 5;
+    height: 280px;
+
+    a{
+        margin-top: 35px;
+    }
+  }
+}
