@@ -2,6 +2,7 @@ import { useCart } from "../../../../stores/useCart/store";
 import { useProduct } from "../../../../stores/useProduct/store";
 import { toMoney } from "../../../../utils/toMoney";
 import { Modal } from "../Modal";
+import styles from "./style.module.scss";
 
 export function ProductModal() {
   const viewingProduct = useProduct((store) => store.viewingProduct);
@@ -14,8 +15,8 @@ export function ProductModal() {
   }
 
   return viewingProduct ? (
-    <Modal onClose={() => setViewingProduct(null)}>
-      <div>
+    <Modal className={styles.modal} onClose={() => setViewingProduct(null)}>
+      <div className={styles.box}>
         <img
           src={viewingProduct.img}
           alt={`Ilustração do produto ${viewingProduct.name}`}
