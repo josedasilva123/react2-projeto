@@ -1,3 +1,5 @@
+@import "../../../../styles/animations.scss";
+
 .overlay{
     position: fixed;
     inset: 0;
@@ -7,7 +9,12 @@
 
     z-index: 100;
 
+    &.closing{
+        animation: fadeOut 0.5s;
+    }
+
     .box{
+        animation: fadeIn 0.5s;
         position: relative;
         overflow: auto;
 
