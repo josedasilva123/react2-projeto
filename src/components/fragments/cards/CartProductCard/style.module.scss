@@ -1,0 +1,40 @@
+.card{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+  
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img{
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button{
+            display: inline-flex;
+        }
+    }
+
+    @media (max-width: 400px){
+        flex-direction: column;
+
+        .left{
+            width: 100%;
+        }
+    }
+}

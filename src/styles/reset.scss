@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: unset;
+    background: transparent;
+    border: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+form{
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}

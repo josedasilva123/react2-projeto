@@ -1,0 +1,19 @@
+.card{
+ .content{
+    margin: 25px 0;
+    
+    h3{
+        margin-bottom: 12px;
+    }
+ }   
+
+ .controls{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    button{
+        display: inline-flex;
+    }
+ }
+}

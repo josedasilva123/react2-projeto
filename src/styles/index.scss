@@ -1,0 +1,18 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./button.scss";
+@import "./container.scss";
+@import "./swiper.scss";
+
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color-lightyellow);
+}
+
+.material-symbols-outlined{
+    font-weight: 200;
+}
